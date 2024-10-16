@@ -1,0 +1,77 @@
+\doxysection{C\+:/\+Users/a\+\_\+gc/\+Documents/\+Q/c/\+VS\+\_\+\+CODE/structures/queue/eje\+\_\+lib/queque\+\_\+module/queue\+\_\+module.\+h}
+\hypertarget{_c_1_2_users_2a_gc_2_documents_2_q_2c_2_v_s__c_o_d_e_2structures_2queue_2eje_lib_2queque_module_2queue_module_8h-example}{}\label{_c_1_2_users_2a_gc_2_documents_2_q_2c_2_v_s__c_o_d_e_2structures_2queue_2eje_lib_2queque_module_2queue_module_8h-example}\#include "{}queue\+\_\+module.\+h"{}
+
+int main(int argc, char const \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]}) \{ Cola\+\_\+t cola; create\+\_\+queue(\&cola);
+
+for(int i = 1; i \texorpdfstring{$<$}{<} 7; i++) cola.\+put(\&cola, 10\texorpdfstring{$\ast$}{*}i);
+
+printf("{}\+Queuqe peek\+: \%d\textbackslash{}n"{}, cola.\+peek(\&cola));
+
+for(int i = 0; i \texorpdfstring{$<$}{<} MAX; i++) printf("{}\+Dequeue\+: \%d\textbackslash{}n"{}, cola.\+pop(\&cola));
+
+printf("{}\+Queue peek\+: \%d\textbackslash{}n"{}, cola.\+peek(\&cola)); return 0; \}
+
+@output Inserted\+: 10 Inserted\+: 20 Inserted\+: 30 Inserted\+: 40 Inserted\+: 50 The queue is full Queue peek\+: 10 Dequeue\+: 10 Dequeue\+: 20 Dequeue\+: 30 Dequeue\+: 40 Dequeue\+: 50 The queue is empty Queue peek\+: -\/1
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024
+\end{DoxyCopyright}
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#ifndef\ QUEUE\_MODULE\_H}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ QUEUE\_MODULE\_H}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}string.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ MAX\_ELEM\_QUEUE\ 5\ }\textcolor{comment}{//\ Tamaño\ máximo\ de\ la\ cola}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_cola}{Cola}}\ \mbox{\hyperlink{struct_cola}{Cola\_t}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ void(*\ \mbox{\hyperlink{queue__module_8h_a57fe04a6c7e317022b06ee383703ea0d}{tf0\_t}})(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ int(*\ \mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\_t}})(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ int(*\ \mbox{\hyperlink{queue__module_8h_a661c0f1737d67e2d4c50dc00a4a7269b}{tf2\_t}})(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola,\ \textcolor{keywordtype}{int}\ valor);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_cola}{Cola}}\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_cola_affa42f1304b8eeff0eef8070cd05430b}{elem}}[\mbox{\hyperlink{queue__module_8h_a6de00b39a173e65cd884067fc7eacd35}{MAX\_ELEM\_QUEUE}}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ int8\_t\ \mbox{\hyperlink{struct_cola_ac5c889ffb4d78feac2149d5cef2b6c61}{front}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ int8\_t\ \mbox{\hyperlink{struct_cola_acfe6ad513f32074e7a3dae4505fa3aa6}{rear}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{queue__module_8h_a57fe04a6c7e317022b06ee383703ea0d}{tf0\_t}}\ \mbox{\hyperlink{struct_cola_a52b425218658de4802b4c7e641689f03}{init\_queue}};\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\_t}}\ \mbox{\hyperlink{struct_cola_a951f4f32d1bbbe62ea1092f6a170e19c}{is\_empty}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\_t}}\ \mbox{\hyperlink{struct_cola_aee1316b1f12f4af9a015de96488f56fe}{is\_full}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{queue__module_8h_a661c0f1737d67e2d4c50dc00a4a7269b}{tf2\_t}}\ \mbox{\hyperlink{struct_cola_a0811cb2c6b30aa55cef4704a0e8d95c0}{put}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\_t}}\ \mbox{\hyperlink{struct_cola_a4a5158de81cb7cd7498cd5c40e3f7756}{pop}};}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\_t}}\ \mbox{\hyperlink{struct_cola_a3727579960d313146ddf40325a8047d3}{peek}};}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ inicializarCola(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ estaVacia(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ estaLlena(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ enqueue(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola,\ \textcolor{keywordtype}{int}\ valor);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ dequeue(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ frente(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{queue__module_8c_a02417b6bebca4778ce5f1fa68a53b385}{create\_queue}}(\mbox{\hyperlink{struct_cola}{Cola\_t}}\ *cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ QUEUE\_MODULE\_H}}
+
+\end{DoxyCodeInclude}
+ 

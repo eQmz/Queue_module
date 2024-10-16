@@ -1,0 +1,166 @@
+\doxysection{queue\+\_\+module.\+h File Reference}
+\hypertarget{queue__module_8h}{}\label{queue__module_8h}\index{queue\_module.h@{queue\_module.h}}
+
+
+This library contains a basic queque structure which has its own methods and constructor.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stdlib.\+h"{}}\newline
+{\ttfamily \#include "{}string.\+h"{}}\newline
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cola}{Cola}}
+\begin{DoxyCompactList}\small\item\em This is the queue structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{queue__module_8h_a6de00b39a173e65cd884067fc7eacd35}{MAX\+\_\+\+ELEM\+\_\+\+QUEUE}}~5
+\begin{DoxyCompactList}\small\item\em This MACRO is the max number of elements in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_cola}{Cola}} \mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em This is the queue typedef. \end{DoxyCompactList}\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue__module_8h_a57fe04a6c7e317022b06ee383703ea0d}{tf0\+\_\+t}}) (\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}cola)
+\begin{DoxyCompactList}\small\item\em This is the definition for a function pointer with Cola\+\_\+t parameter and return of void type. \end{DoxyCompactList}\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}}) (\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}cola)
+\begin{DoxyCompactList}\small\item\em This is the definition for a function pointer with Cola\+\_\+t parameter and return of int type. \end{DoxyCompactList}\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue__module_8h_a661c0f1737d67e2d4c50dc00a4a7269b}{tf2\+\_\+t}}) (\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}cola, int valor)
+\begin{DoxyCompactList}\small\item\em This is the definition for a function pointer with Cola\+\_\+t and int parameters and return of int type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{queue__module_8h_a02417b6bebca4778ce5f1fa68a53b385}{create\+\_\+queue}} (\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}cola)
+\begin{DoxyCompactList}\small\item\em This is the constructor that initializes the methods pointers and the queue attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This library contains a basic queque structure which has its own methods and constructor. 
+
+\begin{DoxyAuthor}{Author}
+E\+\_\+\+Mt\+SnZ 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/10-\/15 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{queue__module_8h}{queue\_module.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *argv[])}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_cola}{Cola\_t}}\ cola;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{queue__module_8c_a02417b6bebca4778ce5f1fa68a53b385}{create\_queue}}(\&cola);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ 7;\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cola.\mbox{\hyperlink{struct_cola_a0811cb2c6b30aa55cef4704a0e8d95c0}{put}}(\&cola,\ 10*i);}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Queuqe\ peek:\ \%d\(\backslash\)n"{}},\ cola.\mbox{\hyperlink{struct_cola_a3727579960d313146ddf40325a8047d3}{peek}}(\&cola));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MAX;\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Dequeue:\ \%d\(\backslash\)n"{}},\ cola.\mbox{\hyperlink{struct_cola_a4a5158de81cb7cd7498cd5c40e3f7756}{pop}}(\&cola));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Queue\ peek:\ \%d\(\backslash\)n"{}},\ cola.\mbox{\hyperlink{struct_cola_a3727579960d313146ddf40325a8047d3}{peek}}(\&cola));}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Output}
+\DoxyCodeLine{Inserted:\ 10}
+\DoxyCodeLine{Inserted:\ 20}
+\DoxyCodeLine{Inserted:\ 30}
+\DoxyCodeLine{Inserted:\ 40}
+\DoxyCodeLine{Inserted:\ 50}
+\DoxyCodeLine{The\ queue\ is\ full}
+\DoxyCodeLine{Queue\ peek:\ 10}
+\DoxyCodeLine{Dequeue:\ 10}
+\DoxyCodeLine{Dequeue:\ 20}
+\DoxyCodeLine{Dequeue:\ 30}
+\DoxyCodeLine{Dequeue:\ 40}
+\DoxyCodeLine{Dequeue:\ 50}
+\DoxyCodeLine{The\ queue\ is\ empty}
+\DoxyCodeLine{Queue\ peek:\ -\/1}
+
+\end{DoxyCode}
+ 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{queue__module_8h_a6de00b39a173e65cd884067fc7eacd35}\index{queue\_module.h@{queue\_module.h}!MAX\_ELEM\_QUEUE@{MAX\_ELEM\_QUEUE}}
+\index{MAX\_ELEM\_QUEUE@{MAX\_ELEM\_QUEUE}!queue\_module.h@{queue\_module.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_ELEM\_QUEUE}{MAX\_ELEM\_QUEUE}}
+{\footnotesize\ttfamily \label{queue__module_8h_a6de00b39a173e65cd884067fc7eacd35} 
+\#define MAX\+\_\+\+ELEM\+\_\+\+QUEUE~5}
+
+
+
+This MACRO is the max number of elements in the queue. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}\index{queue\_module.h@{queue\_module.h}!Cola\_t@{Cola\_t}}
+\index{Cola\_t@{Cola\_t}!queue\_module.h@{queue\_module.h}}
+\doxysubsubsection{\texorpdfstring{Cola\_t}{Cola\_t}}
+{\footnotesize\ttfamily \label{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9} 
+typedef struct \mbox{\hyperlink{struct_cola}{Cola}} \mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}}}
+
+
+
+This is the queue typedef. 
+
+\Hypertarget{queue__module_8h_a57fe04a6c7e317022b06ee383703ea0d}\index{queue\_module.h@{queue\_module.h}!tf0\_t@{tf0\_t}}
+\index{tf0\_t@{tf0\_t}!queue\_module.h@{queue\_module.h}}
+\doxysubsubsection{\texorpdfstring{tf0\_t}{tf0\_t}}
+{\footnotesize\ttfamily \label{queue__module_8h_a57fe04a6c7e317022b06ee383703ea0d} 
+typedef void(\texorpdfstring{$\ast$}{*} tf0\+\_\+t) (\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}cola)}
+
+
+
+This is the definition for a function pointer with Cola\+\_\+t parameter and return of void type. 
+
+\Hypertarget{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}\index{queue\_module.h@{queue\_module.h}!tf1\_t@{tf1\_t}}
+\index{tf1\_t@{tf1\_t}!queue\_module.h@{queue\_module.h}}
+\doxysubsubsection{\texorpdfstring{tf1\_t}{tf1\_t}}
+{\footnotesize\ttfamily \label{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5} 
+typedef int(\texorpdfstring{$\ast$}{*} tf1\+\_\+t) (\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}cola)}
+
+
+
+This is the definition for a function pointer with Cola\+\_\+t parameter and return of int type. 
+
+\Hypertarget{queue__module_8h_a661c0f1737d67e2d4c50dc00a4a7269b}\index{queue\_module.h@{queue\_module.h}!tf2\_t@{tf2\_t}}
+\index{tf2\_t@{tf2\_t}!queue\_module.h@{queue\_module.h}}
+\doxysubsubsection{\texorpdfstring{tf2\_t}{tf2\_t}}
+{\footnotesize\ttfamily \label{queue__module_8h_a661c0f1737d67e2d4c50dc00a4a7269b} 
+typedef int(\texorpdfstring{$\ast$}{*} tf2\+\_\+t) (\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}cola, int valor)}
+
+
+
+This is the definition for a function pointer with Cola\+\_\+t and int parameters and return of int type. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{queue__module_8h_a02417b6bebca4778ce5f1fa68a53b385}\index{queue\_module.h@{queue\_module.h}!create\_queue@{create\_queue}}
+\index{create\_queue@{create\_queue}!queue\_module.h@{queue\_module.h}}
+\doxysubsubsection{\texorpdfstring{create\_queue()}{create\_queue()}}
+{\footnotesize\ttfamily \label{queue__module_8h_a02417b6bebca4778ce5f1fa68a53b385} 
+void create\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{queue__module_8h_aec6c3e2f35c9b86b25a277b4c42438c9}{Cola\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cola}{}\end{DoxyParamCaption})}
+
+
+
+This is the constructor that initializes the methods pointers and the queue attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cola} & queue instance \\
+\hline
+\end{DoxyParams}

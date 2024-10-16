@@ -1,0 +1,180 @@
+\doxysection{Cola Struct Reference}
+\hypertarget{struct_cola}{}\label{struct_cola}\index{Cola@{Cola}}
+
+
+This is the queue structure definition.  
+
+
+
+
+{\ttfamily \#include $<$queue\+\_\+module.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_cola_affa42f1304b8eeff0eef8070cd05430b}{elem}} \mbox{[}\mbox{\hyperlink{queue__module_8h_a6de00b39a173e65cd884067fc7eacd35}{MAX\+\_\+\+ELEM\+\_\+\+QUEUE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em elements array of the queue \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{struct_cola_ac5c889ffb4d78feac2149d5cef2b6c61}{front}}
+\begin{DoxyCompactList}\small\item\em front of the queue \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{struct_cola_acfe6ad513f32074e7a3dae4505fa3aa6}{rear}}
+\begin{DoxyCompactList}\small\item\em rear or end of the queue \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue__module_8h_a57fe04a6c7e317022b06ee383703ea0d}{tf0\+\_\+t}} \mbox{\hyperlink{struct_cola_a52b425218658de4802b4c7e641689f03}{init\+\_\+queue}}
+\begin{DoxyCompactList}\small\item\em Initializes the attributes of the queue instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} \mbox{\hyperlink{struct_cola_a951f4f32d1bbbe62ea1092f6a170e19c}{is\+\_\+empty}}
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} \mbox{\hyperlink{struct_cola_aee1316b1f12f4af9a015de96488f56fe}{is\+\_\+full}}
+\begin{DoxyCompactList}\small\item\em Checks if the queue is full. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue__module_8h_a661c0f1737d67e2d4c50dc00a4a7269b}{tf2\+\_\+t}} \mbox{\hyperlink{struct_cola_a0811cb2c6b30aa55cef4704a0e8d95c0}{put}}
+\begin{DoxyCompactList}\small\item\em Puts a new item or element in the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} \mbox{\hyperlink{struct_cola_a4a5158de81cb7cd7498cd5c40e3f7756}{pop}}
+\begin{DoxyCompactList}\small\item\em pulls an item from the queue \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} \mbox{\hyperlink{struct_cola_a3727579960d313146ddf40325a8047d3}{peek}}
+\begin{DoxyCompactList}\small\item\em Shows the last item of the queue and it does not pull the last item from the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the queue structure definition. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_cola_affa42f1304b8eeff0eef8070cd05430b}\index{Cola@{Cola}!elem@{elem}}
+\index{elem@{elem}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{elem}{elem}}
+{\footnotesize\ttfamily \label{struct_cola_affa42f1304b8eeff0eef8070cd05430b} 
+int elem\mbox{[}\mbox{\hyperlink{queue__module_8h_a6de00b39a173e65cd884067fc7eacd35}{MAX\+\_\+\+ELEM\+\_\+\+QUEUE}}\mbox{]}}
+
+
+
+elements array of the queue 
+
+\Hypertarget{struct_cola_ac5c889ffb4d78feac2149d5cef2b6c61}\index{Cola@{Cola}!front@{front}}
+\index{front@{front}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{front}{front}}
+{\footnotesize\ttfamily \label{struct_cola_ac5c889ffb4d78feac2149d5cef2b6c61} 
+int8\+\_\+t front}
+
+
+
+front of the queue 
+
+\Hypertarget{struct_cola_a52b425218658de4802b4c7e641689f03}\index{Cola@{Cola}!init\_queue@{init\_queue}}
+\index{init\_queue@{init\_queue}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{init\_queue}{init\_queue}}
+{\footnotesize\ttfamily \label{struct_cola_a52b425218658de4802b4c7e641689f03} 
+\mbox{\hyperlink{queue__module_8h_a57fe04a6c7e317022b06ee383703ea0d}{tf0\+\_\+t}} init\+\_\+queue}
+
+
+
+Initializes the attributes of the queue instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cola} & This is the queue instance \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_cola_a951f4f32d1bbbe62ea1092f6a170e19c}\index{Cola@{Cola}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{is\_empty}{is\_empty}}
+{\footnotesize\ttfamily \label{struct_cola_a951f4f32d1bbbe62ea1092f6a170e19c} 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} is\+\_\+empty}
+
+
+
+Checks if the queue is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cola} & The queue instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int if the queue is empty returns 1 otherwise returns 0 
+\end{DoxyReturn}
+\Hypertarget{struct_cola_aee1316b1f12f4af9a015de96488f56fe}\index{Cola@{Cola}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{is\_full}{is\_full}}
+{\footnotesize\ttfamily \label{struct_cola_aee1316b1f12f4af9a015de96488f56fe} 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} is\+\_\+full}
+
+
+
+Checks if the queue is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cola} & The queue instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int if the queue is full returns 1 otherwise returns 0 
+\end{DoxyReturn}
+\Hypertarget{struct_cola_a3727579960d313146ddf40325a8047d3}\index{Cola@{Cola}!peek@{peek}}
+\index{peek@{peek}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{peek}{peek}}
+{\footnotesize\ttfamily \label{struct_cola_a3727579960d313146ddf40325a8047d3} 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} peek}
+
+
+
+Shows the last item of the queue and it does not pull the last item from the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cola} & queue instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int if the queue is empty returns -\/1 otherwise returns the item value 
+\end{DoxyReturn}
+\Hypertarget{struct_cola_a4a5158de81cb7cd7498cd5c40e3f7756}\index{Cola@{Cola}!pop@{pop}}
+\index{pop@{pop}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{pop}{pop}}
+{\footnotesize\ttfamily \label{struct_cola_a4a5158de81cb7cd7498cd5c40e3f7756} 
+\mbox{\hyperlink{queue__module_8h_a9fd0112696a1ee33a1fe274722ca1dd5}{tf1\+\_\+t}} pop}
+
+
+
+pulls an item from the queue 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cola} & queue instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int if the queue is empty returns -\/1 otherwise returns the item value 
+\end{DoxyReturn}
+\Hypertarget{struct_cola_a0811cb2c6b30aa55cef4704a0e8d95c0}\index{Cola@{Cola}!put@{put}}
+\index{put@{put}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{put}{put}}
+{\footnotesize\ttfamily \label{struct_cola_a0811cb2c6b30aa55cef4704a0e8d95c0} 
+\mbox{\hyperlink{queue__module_8h_a661c0f1737d67e2d4c50dc00a4a7269b}{tf2\+\_\+t}} put}
+
+
+
+Puts a new item or element in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cola} & queue instance \\
+\hline
+{\em valor} & item value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int if the queue is full returns 1 otherwise returns 0 
+\end{DoxyReturn}
+\Hypertarget{struct_cola_acfe6ad513f32074e7a3dae4505fa3aa6}\index{Cola@{Cola}!rear@{rear}}
+\index{rear@{rear}!Cola@{Cola}}
+\doxysubsubsection{\texorpdfstring{rear}{rear}}
+{\footnotesize\ttfamily \label{struct_cola_acfe6ad513f32074e7a3dae4505fa3aa6} 
+int8\+\_\+t rear}
+
+
+
+rear or end of the queue 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{queue__module_8h}{queue\+\_\+module.\+h}}\end{DoxyCompactItemize}
