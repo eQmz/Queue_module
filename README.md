@@ -70,6 +70,7 @@ Queue peek: -1
 ## Compilation
 First you have to download the library (or to clone or to add to your project like a submodule). 
 The library location should look as follows:
+
 ![example_lib_1](image.png)
 
 Then, the next step for compilation it can be realized using the next gcc command on the terminal:
@@ -88,7 +89,7 @@ To excecute the main.exe file you can use the next command:
 I hope you enjoy with this code, I know there are many ways to learn the concept of a queue but I hope this example helps you. Remember, a basic queue have three attributes (element array, front, rear) and six or five methods (init queue, check empty queue, check full queue, enqueue elements, 
 dequeue elements and optional, shows the queue peek).
 
-And remember use
+And remember to use
 
 👍"Hello Dog! 🐶"
 
